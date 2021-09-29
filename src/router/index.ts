@@ -15,7 +15,7 @@ const routes: RoutesType[] = [
   {
     path: '/',
     name: 'Home',
-    component: () => import(/* webpackChunkName: "home" */ '../App.vue'),
+    component: () => import(/* webpackChunkName: "home" */ '/@/views/Home.vue'),
   },
 ]
 
