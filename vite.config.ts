@@ -1,23 +1,24 @@
-import { defineConfig } from 'vite'
-import Components from 'unplugin-vue-components/vite'
-import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
-import vue from '@vitejs/plugin-vue'
+import { defineConfig } from 'vite';
+import Components from 'unplugin-vue-components/vite';
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
+import vue from '@vitejs/plugin-vue';
 import path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   server: {
-    port: 4000,
+    port: 4000
   },
-  base:'/',
+  base: './',
   resolve: {
     alias: {
-      '/@': path.resolve(__dirname, './src'),
-    },
+      '@': path.resolve(__dirname, './src')
+    }
   },
   plugins: [
-    vue(),    
+    vue(),
     Components({
-    resolvers: [ElementPlusResolver()],
-  }),]
-})
+      resolvers: [ElementPlusResolver()]
+    })
+  ]
+});

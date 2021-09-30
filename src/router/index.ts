@@ -1,27 +1,16 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 
-interface RoutesType {
-  path: string;
-  name: string;
-  component: () => {};
-  meta?: {
-    index?: number;
-    keepAlive?: boolean;
-  };
-  children?: RoutesType[];
-}
-
-const routes: RoutesType[] = [
+const routes: RouteRecordRaw[] = [
   {
     path: '/',
     name: 'Home',
-    component: () => import(/* webpackChunkName: "home" */ '/@/views/Home.vue'),
-  },
-]
+    component: () => import(/* webpackChunkName: "home" */ '@/views/Home.vue')
+  }
+];
 
 const router = createRouter({
   history: createWebHistory(),
   routes
-})
+});
 
-export default router
+export default router;
