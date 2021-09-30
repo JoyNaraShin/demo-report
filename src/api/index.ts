@@ -6,6 +6,8 @@ interface Param {
   search_monrth?: number;
 }
 
+console.log('test');
+
 const instance = axios.create({
   baseURL: 'https://coding-test.adpopcorn.com/ap/v1/partners/demoreport/',
   timeout: 15000
